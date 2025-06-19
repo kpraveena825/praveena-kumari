@@ -81,7 +81,8 @@ npm run test:registration -- --env environmentName="stage",grepTags="@smoke" --h
 
 **Sample Report:**
 ![image](https://github.com/user-attachments/assets/068b6a2a-b0bb-403c-a2f5-d13e3c231584)
-![image](https://github.com/user-attachments/assets/d741aadd-c60a-4795-89dd-f98ef575e301)
+![image](https://github.com/user-attachments/assets/4065579c-1660-4713-8d56-db5cf3aa33b7)
+
 
 #### CI/CD Run
 - This framework supports the Continous Integration CI with Jenkins, through Jenkinsfile Pipeline Script
@@ -109,7 +110,7 @@ java -Dfile.encoding=UTF-8 -jar jenkins.war
 
 **Here is how the Jenkins Console Output will look like:**
 ![image](https://github.com/user-attachments/assets/1a9d2e35-061f-4a68-9b46-f7645910db4c)
-![image](https://github.com/user-attachments/assets/097297cf-430a-44fc-a8e1-4b87e98e9c72)
+![image](https://github.com/user-attachments/assets/8ef9c373-b3bf-4d5a-b688-54cceafea3c7)
 
 #### Docker multiBrowser parallel execution
 To execute test using Docker, we can do the following in our terminal
