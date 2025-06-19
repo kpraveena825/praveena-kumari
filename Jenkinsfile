@@ -86,24 +86,6 @@ pipeline {
                     reportTitles: 'Cypress Test Automation Framework',
                     useWrapperFileDirectly: true
             ])
-            
-            script {
-               
-                echo 'Publishing JUnit XML Results'
-                def testResults = junit testResults: 'cypress/results/junit/combined-report.xml'
-                
-                //Mapping build status to slack notification colors
-                def COLOR_MAP = [
-                    'SUCCESS'   : '#4CAF50',   //Green
-                    'FAILURE'   : '#F44336',   //Red
-                    'UNSTABLE'  : '#FFC107',   //Yellow
-                    'ABORTED'   : '#9E9E9E',   //Grey
-                    'NOT_BUILT' : '#2196F3',   //Blue
-                    'UNKNOWN'   : '#CCCCCC'    //Light Gray
-                ]
-                
-                echo 'Sending email'     
-            }
         }
         
         success {
