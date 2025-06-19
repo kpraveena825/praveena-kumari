@@ -56,12 +56,6 @@ pipeline {
            }
        }
        
-       stage('Clearing old reports') {
-           steps {
-               bat "npm run report:pre"
-           }
-       }
-       
        stage('Running cypress e2e Tests') {
             //For recording tests on Cypress Cloud Dashboard, you need to set these environment variables
                 steps {
