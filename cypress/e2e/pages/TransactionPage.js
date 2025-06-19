@@ -101,7 +101,9 @@ class TransactionPage extends BasePage {
   addIncometoMyAccount(income) {
     this.addTxnLink.click();
     this.incomeTab.click();
-    this.incomeInputTextBox.type(income);
+    this.incomeInputTextBox.should('exist')
+    .clear()
+    .type(income, { delay: 100, force: true })
     this.selectDropDownValue();
     this.saveTxnBtn.click();
   }

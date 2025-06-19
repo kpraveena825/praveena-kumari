@@ -30,6 +30,7 @@ pipeline {
             choices: ['chrome', 'edge', 'firefox'], 
             description: 'Pick the web browser you want to use to run your scripts. Default will be electron.'
         )
+
         choice(
             name: 'TAG', 
             choices: [
@@ -43,10 +44,6 @@ pipeline {
         )
     }
 
-
-
-    //The stage directive goes in the stages section and should contain a steps section, an optional agent section, 
-    //or other stage-specific directives. Practically speaking, all of the real work done by a Pipeline will be wrapped in one or more stage directives.
    stages {
         
        stage('checked out code and Installing dependencies') {
@@ -57,13 +54,15 @@ pipeline {
        }
        
        stage('Running cypress e2e Tests') {
-            //For recording tests on Cypress Cloud Dashboard, you need to set these environment variables
                 steps {
-                    bat  'npx cypress run --env grepTags=@regression'
-        }
+                    script {
+                     echo "running scrips with Browser: ${params.BROWSER}, TAG: ${params.TAG}, Environment: ${params.TEST_ENVIRONMENT} "
+                    //bat  'npx cypress run --env grepTags=@regression'
+                     bat "npx cypress run --browser ${params.BROWSER} --env environmentName=${params.TEST_ENVIRONMENT},grepTags=${params.TAG}"
+                    }
+                }
         }
         
-        //Mocha JUnit Reporter produces separate XML for each spec result, so we merge the test results into one XML file 
        stage('Merging JUnit reports') {
            steps {
                bat "npm run report:post"
