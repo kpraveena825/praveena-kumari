@@ -27,7 +27,7 @@ pipeline {
         )
         choice(
             name: 'BROWSER', 
-            choices: ['electron', 'chrome', 'edge', 'firefox'], 
+            choices: ['chrome', 'edge', 'firefox'], 
             description: 'Pick the web browser you want to use to run your scripts. Default will be electron.'
         )
         choice(
