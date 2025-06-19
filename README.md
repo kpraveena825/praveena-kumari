@@ -80,8 +80,38 @@ npm run test:registration -- --env environmentName="stage",grepTags="@smoke" --h
 - It embeds the screenshots of tests on failure automatically to the report, and also attaches the videos to report.
 
 **Sample Report:**
+![image](https://github.com/user-attachments/assets/068b6a2a-b0bb-403c-a2f5-d13e3c231584)
+![image](https://github.com/user-attachments/assets/d741aadd-c60a-4795-89dd-f98ef575e301)
 
-#### Docker execution
+#### CI/CD Run
+- This framework supports the Continous Integration CI with Jenkins, through Jenkinsfile Pipeline Script
+- Build with Parameters Allows to select  browser, tags, and environment through a choice parameters
+- Publishes Mochawesome HTML report via HTML Publisher Plugin as a post action
+**Jenkin Run**
+- Start Jenkins by running below command
+``` bash
+java -Dfile.encoding=UTF-8 -jar jenkins.war
+```
+- After Jenkins has started, open a web browser and go to http://localhost:8080 (or the port you specified).
+
+- Complete the one-time necessary configiuration steps like installing plugins, creating admin user etc.
+- Create a pipeline project and provide your git Repository URL
+![image](https://github.com/user-attachments/assets/2225529b-8f21-45b6-a0f1-66d45fc6237e)
+
+- Specify Path to Jenkinsfile e.g. Jenkinsfile since in our case it is located in root directory of our GIT repo.
+- Specify the branch (e.g., main or master or feature ) from which branch you want to run the Script
+- Manage Jenkins ->  Tools Configuration -> NodeJS Installation, choose the NODE JS version, and give a name to it, and add that name under your Jenkin fiile like below
+``` bash tools {
+       nodejs "Node"
+   }
+   ```
+- add HTML Publisher Plugin from [Manage Jenkins -> Plugins] This will allow us to publish Mochawesome HTML reports
+
+**Here is how the Jenkins Console Output will look like:**
+![image](https://github.com/user-attachments/assets/1a9d2e35-061f-4a68-9b46-f7645910db4c)
+![image](https://github.com/user-attachments/assets/097297cf-430a-44fc-a8e1-4b87e98e9c72)
+
+#### Docker multiBrowser parallel execution
 To execute test using Docker, we can do the following in our terminal
  - Build the docker image from Dockerfile
 ``` bash
@@ -95,29 +125,8 @@ docker run -i -v "%cd%":/cypress_docker -t cypress_docker:latest test:login -- -
 ``` bash
 docker-compose -f docker-compose-browsers up
 ```
-#### CI/CD Run
-- This framework supports the Continous Integration CI with Jenkins, through Jenkinsfile Pipeline Script
-- Build with Parameters Allows to select  browser, tags, and environment through a choice parameters
-- Publishes Mochawesome HTML report via HTML Publisher Plugin as a post action
-**Jenkin Run**
-- Start Jenkins by running below command
-``` bash
-java -Dfile.encoding=UTF-8 -jar jenkins.war
-```
-- After Jenkins has started, open a web browser and go to http://localhost:8080 (or the port you specified).
-
-- Complete the one-time necessary configiuration steps like installing plugins, creating admin user etc.
-- Create a pipeline project and provide you git Repository URL
-- Specify Path to Jenkinsfile e.g. Jenkinsfile since in our case it is located in root directory of our GIT repo.
-- Specify the branch (e.g., main or master or feature ) from which branch you want to run the Script
-- Manage Jenkins ->  Tools Configuration -> NodeJS Installation, choose the NODE JS version, and give a name to it, and add that name under your Jenkin fiile like below
-``` bash tools {
-       nodejs "Node"
-   }
-   ```
-- add HTML Publisher Plugin from [Manage Jenkins -> Plugins] This will allow us to publish Mochawesome HTML reports
-
-**Here is how the Jenkins Console Output will look like:**
+**Sample Reports running in EDGE, CHROME, FIREFOX Parallelly**
+![image](https://github.com/user-attachments/assets/df0eee12-903f-417c-9b99-06e87b0203f6)
 
 #### RESOURCES Referred:####
 - https://www.lambdatest.com/blog/jenkins-and-cypress-tutorial/
