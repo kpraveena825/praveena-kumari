@@ -13,7 +13,6 @@ COPY ./reporter-config.json .
 COPY ./package.json .
 COPY ./package-lock.json .
 COPY ./cypress.config.js .
-COPY ./cypress.env.json .
 COPY ./cypress ./cypress
 COPY ./settings ./settings
 
