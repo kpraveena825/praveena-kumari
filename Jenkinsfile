@@ -38,9 +38,6 @@ pipeline {
             name: 'TEST_ENVIRONMENT', 
             choices: [
                 'local',
-                'dev',
-                'qa',
-                'stage',
                 'prod',
             ], 
             description: 'Specify the test environment. Default will be local.'
@@ -96,24 +93,9 @@ pipeline {
        
        stage('Stage 4 - Running cypress e2e Tests') {
             //For recording tests on Cypress Cloud Dashboard, you need to set these environment variables
-            environment {
-                CYPRESS_RECORD_KEY = credentials('cypress-framework-record-key')
-                CYPRESS_PROJECT_ID = credentials('cypress-framework-project-id')
-            }
-
-            steps {
-                //bat "SET NO_COLOR=$NO_COLOR"    //You may want to do this if ASCII characters or colors are not properly formatted in your CI.
-                script {
-                    if (params.TEST_SPEC == "cypress/e2e/tests/*.cy.js") {
-                        echo "Running all test scripts with Browser: ${params.BROWSER}, TAG: ${params.TAG}, Environment: ${params.TEST_ENVIRONMENT}"
-                        bat "npx cypress run --${params.BROWSER_MODE} --browser ${params.BROWSER} --env environmentName=${params.TEST_ENVIRONMENT},grepTags=${params.TAG} ${params.RECORD_TESTS}"
-                    } else {
-                        echo "Running script: ${params.TEST_SPEC} with Browser: ${params.BROWSER}, TAG: ${params.TAG}, Environment: ${params.TEST_ENVIRONMENT}"
-                        bat "npx cypress run --spec cypress/e2e/tests/${params.TEST_SPEC}.cy.js --${params.BROWSER_MODE} --browser ${params.BROWSER} --env environmentName=${params.TEST_ENVIRONMENT},grepTags=${params.TAG} ${params.RECORD_TESTS}"
-                    }
-                }
-                
-            }
+                steps {
+                    sh 'npx cypress run --env grepTags=@regression'
+        }
         }
         
         //Mocha JUnit Reporter produces separate XML for each spec result, so we merge the test results into one XML file 
