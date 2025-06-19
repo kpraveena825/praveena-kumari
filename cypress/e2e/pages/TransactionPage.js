@@ -23,9 +23,7 @@ class TransactionPage extends BasePage {
       .parents('.wrapper-item')
       .find('.right strong');
   }
-  get availableBalance() {
-    return cy.get('#env-inc-wrapper .right strong').first()
-  }
+  get availableBalance() { return cy.get('#env-inc-wrapper .right strong').first() }
 
   get availableAmount() { return cy.get('.nodes-total > li:contains("Available") .right strong') }
 
@@ -43,17 +41,13 @@ class TransactionPage extends BasePage {
     return cy.get('strong.name:contains("Savings")').parents('.wrapper-item').find('.right strong')
   }
 
-  get incomeTxn() {
-    return cy.get('tr#see-all-scheduled').next()
-  }
+  get incomeTxn() { return cy.get('tr#see-all-scheduled').next() }
 
   get deleteTxn() { return cy.get('#addTransactionDelete') }
-
 
   parseAmount(text) {
     return parseFloat(text.replace(/[^0-9.]/g, '').trim());
   }
-
 
   fetchAvailableAmount() {
     return this.availableAmount.invoke('text').then((text) => {
@@ -110,10 +104,10 @@ class TransactionPage extends BasePage {
 
   selectDropDownValue() {
     this.slectAccount
-      .contains('My Account') // partial match on text
+      .contains('My Account') 
       .then((option) => {
-        const val = option.val(); //get the value attribute
-        cy.get('select[name="account"]').select(val); //select using value
+        const val = option.val(); 
+        cy.get('select[name="account"]').select(val); 
       });
   }
 

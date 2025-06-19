@@ -18,24 +18,23 @@ describe("User Login - Success and Failure Scenarios", { tags: ['@Login', '@regr
         cy.fixture('users.json').as('users')
     })
 
-    
-    it("should login successfully with valid credentials", {tags: '@smoke'}, function () {
 
-        LoginPage
-            .loginWithUI(this.users.validUser.email, this.users.validUser.password)
+    it("should login successfully with valid credentials", { tags: '@smoke' }, function () {
+
+        cy.login();
         cy.url().should('include', routes.HOME_ENDPOINT);
-         AccountPage.welcomeMsg
+        AccountPage.welcomeMsg
             .should('contains.text', validationMessages.WELCOME_MSG);
     })
 
-    it("should fail to login with invalid credentials", {tags: '@smoke'}, function () {
+    it("should fail to login with invalid credentials", { tags: '@smoke' }, function () {
 
         LoginPage.loginWithUI(this.users.invalidUser.email, this.users.invalidUser.password)
 
         LoginPage.authError.should('contains.text', validationMessages.AUTH_ERROR);
     })
 
-     it("should fail to login for NO credentials ", function () {
+    it("should fail to login for NO credentials ", function () {
 
         LoginPage.loginWithUI(this.users.blankValue.email, this.users.blankValue.password)
 
@@ -44,10 +43,10 @@ describe("User Login - Success and Failure Scenarios", { tags: ['@Login', '@regr
 
     it("should perform login and logout", function () {
 
-        cy.login(); 
+        cy.login();
 
         basePage.header.performLogout();
-        
+
         AccountPage.h3Heading.should('contains.text', validationMessages.LOGOUT_MSG);
     })
 })

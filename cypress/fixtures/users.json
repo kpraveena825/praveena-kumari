@@ -1,14 +1,27 @@
 {
-    "validUser": {
-      "email": "loginUser@gmail.com",
-      "password": "test123"
-    },
-    "invalidUser": {
-      "email": "invalid@test.com",
-      "password": "invalidpassword"
-    },
-    "blankValue": {
-      "email": " ",
-      "password": " "
-    }
+  "invalidUser": {
+    "email": "invalid@test.com",
+    "password": "invalidpassword"
+  },
+  "blankValue": {
+    "email": " ",
+    "password": " "
+  },
+  "chrome": {
+    "email": "chromeUser@gmail.com",
+    "password": "test123"
+  },
+  "firefox": {
+    "email": "firefox@gmail.com",
+    "password": "test123"
+  },
+  "edge": {
+    "email": "edgeUser@gmail.com",
+    "password": "test123"
+  },
+   "default": {
+    "email": "loginUser@gmail.com",
+    "password": "test123"
+  }
+
 }

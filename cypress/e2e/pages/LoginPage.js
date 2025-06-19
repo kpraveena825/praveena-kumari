@@ -23,8 +23,8 @@ class LoginPage extends BasePage{
         this.passwordInput.type(password)
         this.loginBtn.click()
     }
+    
      confirmPolicy(value) {
-
         if(value) {
             this.policyCheckbox.check();
         } else {

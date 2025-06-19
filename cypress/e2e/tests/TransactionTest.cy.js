@@ -30,7 +30,7 @@ describe("Validating Transaction update", { tags: ['@Cart', '@regression'] }, ()
         });
 
     });
-    
+
     it("should remove the latest transaction and reflect the correct updated balance in Total section", function () {
 
         let income = this.budget.income

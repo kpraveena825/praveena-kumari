@@ -8,7 +8,7 @@ describe("Envelope Management Functionality", { tags: ['@envelope', '@regression
 
   beforeEach(() => {
     cy.fixture('envelope').as('envelopeData');
-    cy.login();
+    cy.login(); // Login via custom command
     AccountPage.welcomeMsg
       .should('contains.text', validationMessages.WELCOME_MSG);
 

@@ -30,12 +30,13 @@ import LoginPage from "../e2e/pages/LoginPage"
 Cypress.Commands.add('login', () => {
 
     cy.fixture('users.json').then((users) => {
-
-        LoginPage.loginWithUI(users.validUser.email, users.validUser.password);
+    const browser = Cypress.browser.name;
+    let loginData = users[browser] || users['default'];
+    cy.log("User name "+loginData.email);
+        LoginPage.loginWithUI(loginData.email, loginData.password);
     })
 
 })
-
 
 Cypress.Commands.add('getParsedAmount', (locator) => {
   return cy.get(locator).invoke('text').then((text) => {
