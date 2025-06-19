@@ -1,0 +1,38 @@
+{
+  "envelopes": [
+    {
+      "category": "Monthly",
+      "items": [
+        {
+          "name": "Electricity",
+          "budget": "100",
+          "addAmount": "100"
+          
+        },
+        {
+          "name": "Internet",
+          "budget": "50",
+          "addAmount": "20"
+        }
+      ]
+    }
+  ],
+  "existingEnvelope": [
+    {
+      "category": "Monthly",
+      "items": [
+        {
+          "name": "Groceries",
+          "budget": "100",
+          "addExpense": "50"
+        },
+        {
+          "name": "Gas",
+          "budget": "50",
+          "addExpense": "50"
+        }
+      ]
+    }
+  ],
+  "income": 2000
+}
