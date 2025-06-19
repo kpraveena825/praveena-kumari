@@ -10,7 +10,7 @@ pipeline {
     }
    
    tools {
-       nodejs "Node 20.5.0"
+       nodejs "Node"
    }
    
 
