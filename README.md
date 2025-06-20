@@ -105,7 +105,8 @@ java -Dfile.encoding=UTF-8 -jar jenkins.war
 
 - Complete the one-time necessary configiuration steps like installing plugins, creating admin user etc.
 - Create a pipeline project and provide your git Repository URL
-![image](https://github.com/user-attachments/assets/2225529b-8f21-45b6-a0f1-66d45fc6237e)
+![image](https://github.com/user-attachments/assets/200f6b37-04a6-4aaa-871a-39b75ff697e5)
+
 
 - Specify Path to Jenkinsfile e.g. Jenkinsfile since in our case it is located in root directory of our GIT repo.
 - Specify the branch (e.g., main or master or feature ) from which branch you want to run the Script
