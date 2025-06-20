@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="68.071" tests="4" failures="2">
+  <testsuite name="Root Suite" timestamp="2025-06-17T09:53:04" tests="0" file="cypress\e2e\tests\LoginTest.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Success and Fail login flow" timestamp="2025-06-17T09:53:04" tests="4" time="68.047" failures="2">
+    <testcase name="Success and Fail login flow should login successfully with valid credentials" time="18.266" classname="should login successfully with valid credentials">
+      <failure message="Timed out retrying after 5000ms: Expected to find content: &apos;header&apos; but never did." type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 5000ms: Expected to find content: 'header' but never did.
+    at Context.eval (webpack://cypress-framework/./cypress/e2e/tests/LoginTest.cy.js:32:29)]]></failure>
+    </testcase>
+    <testcase name="Success and Fail login flow should fail to login with invalid credentials" time="10.982" classname="should fail to login with invalid credentials">
+    </testcase>
+    <testcase name="Success and Fail login flow should fail to login for No credentials " time="4.498" classname="should fail to login for No credentials ">
+      <failure message="`cy.type()` cannot accept an empty string. You need to actually type something.
+
+https://on.cypress.io/type" type="CypressError"><![CDATA[CypressError: `cy.type()` cannot accept an empty string. You need to actually type something.
+
+https://on.cypress.io/type
+    at Context.type (https://goodbudget.com/__cypress/runner/cypress_runner.js:115388:68)
+    at wrapped (https://goodbudget.com/__cypress/runner/cypress_runner.js:138092:19)
+From Your Spec Code:
+    at LoginPage.loginWithUI (webpack://cypress-framework/./cypress/e2e/pages/LoginPage.js:25:24)
+    at Context.eval (webpack://cypress-framework/./cypress/e2e/tests/LoginTest.cy.js:47:13)]]></failure>
+    </testcase>
+    <testcase name="Success and Fail login flow should perform login and logout" time="10.189" classname="should perform login and logout">
+    </testcase>
+  </testsuite>
+</testsuites>

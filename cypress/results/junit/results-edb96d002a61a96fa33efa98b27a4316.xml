@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="48.173" tests="4" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-06-19T20:50:11" tests="0" file="cypress\e2e\tests\LoginTest.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="User Login - Success and Failure Scenarios" timestamp="2025-06-19T20:50:11" tests="4" time="48.156" failures="0">
+    <testcase name="User Login - Success and Failure Scenarios should login successfully with valid credentials" time="13.816" classname="should login successfully with valid credentials">
+    </testcase>
+    <testcase name="User Login - Success and Failure Scenarios should fail to login with invalid credentials" time="12.355" classname="should fail to login with invalid credentials">
+    </testcase>
+    <testcase name="User Login - Success and Failure Scenarios should fail to login for NO credentials " time="10.934" classname="should fail to login for NO credentials ">
+    </testcase>
+    <testcase name="User Login - Success and Failure Scenarios should perform login and logout" time="10.502" classname="should perform login and logout">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="436.489" tests="2" failures="1">
+  <testsuite name="Root Suite" timestamp="2025-06-19T20:58:12" tests="0" file="cypress/e2e/tests/EnvelopeTest.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Envelope Management Functionality" timestamp="2025-06-19T20:58:12" tests="2" time="436.351" failures="1">
+    <testcase name="Envelope Management Functionality should allow the user to add a new envelope and successfully delete it" time="262.899" classname="should allow the user to add a new envelope and successfully delete it">
+    </testcase>
+    <testcase name="Envelope Management Functionality should fill an envelope and validate that the available amount is updated correctly" time="0.000" classname="should fill an envelope and validate that the available amount is updated correctly">
+      <failure message="Timed out after waiting `60000ms` for your remote page to load.
+
+Your page did not fire its `load` event within `60000ms`.
+
+You can try increasing the `pageLoadTimeout` value in `cypress_docker/cypress.config.js` to wait longer.
+
+Browsers will not fire the `load` event until all stylesheets and scripts are done downloading.
+
+When this `load` event occurs, Cypress will continue running commands." type="CypressError"><![CDATA[CypressError: Timed out after waiting `60000ms` for your remote page to load.
+
+Your page did not fire its `load` event within `60000ms`.
+
+You can try increasing the `pageLoadTimeout` value in `cypress_docker/cypress.config.js` to wait longer.
+
+Browsers will not fire the `load` event until all stylesheets and scripts are done downloading.
+
+When this `load` event occurs, Cypress will continue running commands.
+    at timedOutWaitingForPageLoad (https://goodbudget.com/__cypress/runner/cypress_runner.js:130639:64)
+    at <unknown> (https://goodbudget.com/__cypress/runner/cypress_runner.js:130955:16)
+    at tryCatcher (https://goodbudget.com/__cypress/runner/cypress_runner.js:1830:23)
+    at <unknown> (https://goodbudget.com/__cypress/runner/cypress_runner.js:4209:41)
+    at tryCatcher (https://goodbudget.com/__cypress/runner/cypress_runner.js:1830:23)
+    at Promise._settlePromiseFromHandler (https://goodbudget.com/__cypress/runner/cypress_runner.js:1542:31)
+    at Promise._settlePromise (https://goodbudget.com/__cypress/runner/cypress_runner.js:1599:18)
+    at Promise._settlePromise0 (https://goodbudget.com/__cypress/runner/cypress_runner.js:1644:10)
+    at Promise._settlePromises (https://goodbudget.com/__cypress/runner/cypress_runner.js:1720:18)
+    at _drainQueueStep (https://goodbudget.com/__cypress/runner/cypress_runner.js:2430:12)
+    at _drainQueue (https://goodbudget.com/__cypress/runner/cypress_runner.js:2423:9)
+    at Async._drainQueues (https://goodbudget.com/__cypress/runner/cypress_runner.js:2439:5)
+    at Async.drainQueues (https://goodbudget.com/__cypress/runner/cypress_runner.js:2309:14)
+From Your Spec Code:
+    at get availableLink [as availableLink] (webpack://cypress-framework/./cypress/e2e/pages/EnvelopePage.js:17:34)
+    at EnvelopePage.fillEnvelope (webpack://cypress-framework/./cypress/e2e/pages/EnvelopePage.js:50:9)
+    at Context.eval (webpack://cypress-framework/./cypress/e2e/tests/EnvelopeTest.cy.js:32:21)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

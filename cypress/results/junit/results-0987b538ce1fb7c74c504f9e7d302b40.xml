@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="278.873" tests="4" failures="2">
+  <testsuite name="Root Suite" timestamp="2025-06-19T21:02:28" tests="0" file="cypress/e2e/tests/LoginTest.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="User Login - Success and Failure Scenarios" timestamp="2025-06-19T21:02:28" tests="4" time="278.685" failures="2">
+    <testcase name="User Login - Success and Failure Scenarios should login successfully with valid credentials" time="0.000" classname="should login successfully with valid credentials">
+      <failure message="Timed out retrying after 5000ms: expected &apos;https://goodbudget.com/login&apos; to include &apos;/home&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 5000ms: expected 'https://goodbudget.com/login' to include '/home'
+    at  (webpack://cypress-framework/./cypress/e2e/tests/LoginTest.cy.js:25:17)
+    at __webpack_modules__</setRunnable/runnable.fn (https://goodbudget.com/__cypress/runner/cypress_runner.js:138359:43)
+    at callFn (https://goodbudget.com/__cypress/runner/cypress_runner.js:156978:21)
+    at __webpack_modules__</Runnable.prototype.run (https://goodbudget.com/__cypress/runner/cypress_runner.js:156965:13)
+    at __webpack_modules__</create/onRunnableRun (https://goodbudget.com/__cypress/runner/cypress_runner.js:162889:30)
+    at finallyHandler (https://goodbudget.com/__cypress/runner/cypress_runner.js:4095:23)
+    at tryCatcher (https://goodbudget.com/__cypress/runner/cypress_runner.js:1830:23)
+    at __webpack_modules__</module.exports/Promise.prototype._settlePromiseFromHandler (https://goodbudget.com/__cypress/runner/cypress_runner.js:1542:31)
+    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://goodbudget.com/__cypress/runner/cypress_runner.js:1599:18)
+    at __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://goodbudget.com/__cypress/runner/cypress_runner.js:1644:10)
+    at __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://goodbudget.com/__cypress/runner/cypress_runner.js:1724:18)
+    at _drainQueueStep (https://goodbudget.com/__cypress/runner/cypress_runner.js:2430:12)
+    at _drainQueue (https://goodbudget.com/__cypress/runner/cypress_runner.js:2423:24)
+    at __webpack_modules__</Async.prototype._drainQueues (https://goodbudget.com/__cypress/runner/cypress_runner.js:2439:16)
+    at __webpack_modules__</Async/this.drainQueues (https://goodbudget.com/__cypress/runner/cypress_runner.js:2309:14)]]></failure>
+    </testcase>
+    <testcase name="User Login - Success and Failure Scenarios should fail to login with invalid credentials" time="116.556" classname="should fail to login with invalid credentials">
+    </testcase>
+    <testcase name="User Login - Success and Failure Scenarios should fail to login for NO credentials " time="34.108" classname="should fail to login for NO credentials ">
+    </testcase>
+    <testcase name="User Login - Success and Failure Scenarios should perform login and logout" time="0.000" classname="should perform login and logout">
+      <failure message="Timed out retrying after 5000ms: Expected to find content: &apos;Logout&apos; within the selector: &apos;a&apos; but never did." type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 5000ms: Expected to find content: 'Logout' within the selector: 'a' but never did.
+    at get logOutLink (webpack://cypress-framework/./cypress/e2e/components/HeaderComponent.js:3:33)
+    at performLogout (webpack://cypress-framework/./cypress/e2e/components/HeaderComponent.js:10:8)
+    at  (webpack://cypress-framework/./cypress/e2e/tests/LoginTest.cy.js:48:24)
+    at __webpack_modules__</setRunnable/runnable.fn (https://goodbudget.com/__cypress/runner/cypress_runner.js:138359:43)
+    at callFn (https://goodbudget.com/__cypress/runner/cypress_runner.js:156978:21)
+    at __webpack_modules__</Runnable.prototype.run (https://goodbudget.com/__cypress/runner/cypress_runner.js:156965:13)
+    at __webpack_modules__</create/onRunnableRun (https://goodbudget.com/__cypress/runner/cypress_runner.js:162889:30)
+    at finallyHandler (https://goodbudget.com/__cypress/runner/cypress_runner.js:4095:23)
+    at tryCatcher (https://goodbudget.com/__cypress/runner/cypress_runner.js:1830:23)
+    at __webpack_modules__</module.exports/Promise.prototype._settlePromiseFromHandler (https://goodbudget.com/__cypress/runner/cypress_runner.js:1542:31)
+    at __webpack_modules__</module.exports/Promise.prototype._settlePromise (https://goodbudget.com/__cypress/runner/cypress_runner.js:1599:18)
+    at __webpack_modules__</module.exports/Promise.prototype._settlePromise0 (https://goodbudget.com/__cypress/runner/cypress_runner.js:1644:10)
+    at __webpack_modules__</module.exports/Promise.prototype._settlePromises (https://goodbudget.com/__cypress/runner/cypress_runner.js:1724:18)
+    at _drainQueueStep (https://goodbudget.com/__cypress/runner/cypress_runner.js:2430:12)
+    at _drainQueue (https://goodbudget.com/__cypress/runner/cypress_runner.js:2423:24)
+    at __webpack_modules__</Async.prototype._drainQueues (https://goodbudget.com/__cypress/runner/cypress_runner.js:2439:16)
+    at __webpack_modules__</Async/this.drainQueues (https://goodbudget.com/__cypress/runner/cypress_runner.js:2309:14)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

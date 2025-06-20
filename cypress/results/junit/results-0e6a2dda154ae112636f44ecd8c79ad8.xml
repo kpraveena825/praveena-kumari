@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="78.262" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-06-19T20:48:47" tests="0" file="cypress\e2e\tests\EnvelopeTest.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Envelope Management Functionality" timestamp="2025-06-19T20:48:47" tests="2" time="78.258" failures="0">
+    <testcase name="Envelope Management Functionality should allow the user to add a new envelope and successfully delete it" time="52.336" classname="should allow the user to add a new envelope and successfully delete it">
+    </testcase>
+    <testcase name="Envelope Management Functionality should fill an envelope and validate that the available amount is updated correctly" time="25.083" classname="should fill an envelope and validate that the available amount is updated correctly">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="32.015" tests="2" failures="1">
+  <testsuite name="Root Suite" timestamp="2025-06-17T19:54:51" tests="0" file="cypress\e2e\tests\TransactionTest.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Validating Transaction update" timestamp="2025-06-17T19:54:51" tests="2" time="32.003" failures="1">
+    <testcase name="Validating Transaction update should be able to add transaction to the account" time="14.480" classname="should be able to add transaction to the account">
+    </testcase>
+    <testcase name="Validating Transaction update should be able to delete transaction from the account" time="9.740" classname="should be able to delete transaction from the account">
+      <failure message="_BudgetPage.default.deleteTxn is not a function" type="TypeError"><![CDATA[TypeError: _BudgetPage.default.deleteTxn is not a function
+    at Context.eval (webpack://cypress-framework/./cypress/e2e/tests/TransactionTest.cy.js:52:23)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

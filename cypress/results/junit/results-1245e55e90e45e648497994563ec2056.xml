@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="18.608" tests="3" failures="3">
+  <testsuite name="Root Suite" timestamp="2025-06-17T09:04:32" tests="0" file="cypress\e2e\tests\LoginTest.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Success and Fail login flow" timestamp="2025-06-17T09:04:32" tests="3" time="18.597" failures="3">
+    <testcase name="Success and Fail login flow should login successfully with valid credentials" time="5.880" classname="should login successfully with valid credentials">
+      <failure message="`cy.get()` only accepts an options object for its second argument. You passed Log in
+
+https://on.cypress.io/get" type="CypressError"><![CDATA[CypressError: `cy.get()` only accepts an options object for its second argument. You passed Log in
+
+https://on.cypress.io/get
+    at $Command.get (https://goodbudget.com/__cypress/runner/cypress_runner.js:131948:68)
+    at cyFn (https://goodbudget.com/__cypress/runner/cypress_runner.js:138201:19)
+From Your Spec Code:
+    at get loginLink (webpack://cypress-framework/./cypress/e2e/pages/LoginPage.js:7:32)
+    at LoginPage.loginWithUI (webpack://cypress-framework/./cypress/e2e/pages/LoginPage.js:27:13)
+    at Context.eval (webpack://cypress-framework/./cypress/e2e/tests/LoginTest.cy.js:28:13)]]></failure>
+    </testcase>
+    <testcase name="Success and Fail login flow should fail to login with invalid credentials" time="3.506" classname="should fail to login with invalid credentials">
+      <failure message="`cy.get()` only accepts an options object for its second argument. You passed Log in
+
+https://on.cypress.io/get" type="CypressError"><![CDATA[CypressError: `cy.get()` only accepts an options object for its second argument. You passed Log in
+
+https://on.cypress.io/get
+    at $Command.get (https://goodbudget.com/__cypress/runner/cypress_runner.js:131948:68)
+    at cyFn (https://goodbudget.com/__cypress/runner/cypress_runner.js:138201:19)
+From Your Spec Code:
+    at get loginLink (webpack://cypress-framework/./cypress/e2e/pages/LoginPage.js:7:32)
+    at LoginPage.loginWithUI (webpack://cypress-framework/./cypress/e2e/pages/LoginPage.js:27:13)
+    at Context.eval (webpack://cypress-framework/./cypress/e2e/tests/LoginTest.cy.js:37:13)]]></failure>
+    </testcase>
+    <testcase name="Success and Fail login flow should perform login and logout" time="0.303" classname="should perform login and logout">
+      <failure message="Cannot read properties of undefined (reading &apos;should&apos;)" type="TypeError"><![CDATA[TypeError: Cannot read properties of undefined (reading 'should')
+    at Context.eval (webpack://cypress-framework/./cypress/e2e/tests/LoginTest.cy.js:50:13)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

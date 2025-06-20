@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="28.831" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-06-17T17:50:09" tests="0" file="cypress\e2e\tests\TransactionTest.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Validating Transaction update" timestamp="2025-06-17T17:50:09" tests="1" time="28.819" failures="0">
+    <testcase name="Validating Transaction update should be able to add transaction to the account" time="12.848" classname="should be able to add transaction to the account">
+    </testcase>
+  </testsuite>
+</testsuites>
