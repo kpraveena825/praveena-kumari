@@ -89,8 +89,7 @@ npm run test:registration -- --env environmentName="stage",grepTags="@smoke" --h
 - It embeds the screenshots of tests on failure automatically to the report, and also attaches the videos to report.
 
 **Sample Report:**
-![image](https://github.com/user-attachments/assets/068b6a2a-b0bb-403c-a2f5-d13e3c231584)
-![image](https://github.com/user-attachments/assets/4065579c-1660-4713-8d56-db5cf3aa33b7)
+![image](https://github.com/user-attachments/assets/9796f385-dbf2-4bbb-96d9-1be5767a209e)
 
 
 #### CI/CD Run
