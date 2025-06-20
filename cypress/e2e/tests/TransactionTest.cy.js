@@ -1,31 +1,38 @@
-
-import AccountPage from "../pages/AccountPage";
 import TransactionPage from "../pages/TransactionPage";
-import { validationMessages } from "../config/errorMessages";
+import BasePage from "../pages/BasePage";
+import { validationMessages } from "../config/validationMessages";
 
-describe("Validating Transaction update", { tags: ['@Cart', '@regression'] }, () => {
+describe("Validating Transaction update", { tags: ['@Transaction', '@regression'] }, () => {
+
+    let basePage;
 
     beforeEach(() => {
-        cy.fixture('budget.json').as('budget')
+        basePage = new BasePage();
+        cy.fixture('budget.json').as('budget') //load Test data
         cy.login(); //login via custom command
-        AccountPage.welcomeMsg
+        basePage.header.welcomeMsg
             .should('contains.text', validationMessages.WELCOME_MSG);
-
     })
 
     it("should update the Total balance when a new income transaction is added", { tags: '@smoke' }, function () {
-        let income = this.budget.income
+        const txnAmount = this.budget.income
+
+        // Go to accounts section
         TransactionPage.gotoAccountsTab();
 
-        TransactionPage.parseAmountFromElement(TransactionPage.myAccount).then((initialAmount) => {
-            const expectedAmount = initialAmount + income;
+        // Capture current account balance
+        TransactionPage.parseAmountFromElement(TransactionPage.myAccount).then((initialBalance) => {
+            const finalBalance = initialBalance + txnAmount;
 
-            TransactionPage.addIncometoMyAccount(income);
-            TransactionPage
-                .waitForAmountToUpdate(TransactionPage.myAccount, initialAmount);
+            // Add income transaction
+            TransactionPage.addIncometoMyAccount(txnAmount);
 
-            TransactionPage.parseAmountFromElement(TransactionPage.myAccount).then((updatedAmount) => {
-                expect(updatedAmount).to.equal(expectedAmount);
+            // Wait until UI reflects the updated balance
+            TransactionPage.waitForAmountToUpdate(TransactionPage.myAccount, initialBalance);
+
+            // Validate updated balance matches expected value
+            TransactionPage.parseAmountFromElement(TransactionPage.myAccount).then((updatedBalance) => {
+                expect(updatedBalance).to.equal(finalBalance);
             });
         });
 
@@ -33,19 +40,27 @@ describe("Validating Transaction update", { tags: ['@Cart', '@regression'] }, ()
 
     it("should remove the latest transaction and reflect the correct updated balance in Total section", function () {
 
-        let income = this.budget.income
-        TransactionPage.addIncometoMyAccount(income);
+        const txnAmount = this.budget.income
+
+        // Add a transaction first so that we have one to delete
+        TransactionPage.addIncometoMyAccount(txnAmount);
         TransactionPage.gotoAccountsTab();
 
-        TransactionPage.parseAmountFromElement(TransactionPage.myAccount).then((initialAmount) => {
-            TransactionPage.fetchandLatestTxn().then((txnAmount) => {
+        // Get balance before deletion
+        TransactionPage.parseAmountFromElement(TransactionPage.myAccount).then((initialBalance) => {
+            TransactionPage.fetchLatestTxn().then((txnAmount) => {
 
-                const expectedAmount = initialAmount - txnAmount;
+                const finalBalance = initialBalance - txnAmount;
 
+                // Delete the latest transaction
                 TransactionPage.deleteLatestTxn();
-                TransactionPage.waitForAmountToUpdate(TransactionPage.myAccount, initialAmount);
-                TransactionPage.parseAmountFromElement(TransactionPage.myAccount).then((updatedAmount) => {
-                    expect(updatedAmount).to.equal(expectedAmount);
+
+                // Wait until balance is updated in UI
+                TransactionPage.waitForAmountToUpdate(TransactionPage.myAccount, initialBalance);
+
+                // Validate updated balance after deleting income
+                TransactionPage.parseAmountFromElement(TransactionPage.myAccount).then((updatedBalance) => {
+                    expect(updatedBalance).to.equal(finalBalance);
                 });
             });
         });
