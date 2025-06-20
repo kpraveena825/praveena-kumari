@@ -34,6 +34,15 @@ Ensure the following tools are installed:
 | Version Control         | Git                                                |
 | Code Quality            | ESLint                                             |
 
+- **Cypress:** is a modern JavaScript-based testing framework, faster, and provides excellent debugging capabilities, making it ideal for UI automation of modern web applications.
+- **JavaScript:** was chosen as it's the language of the web and seamlessly integrates with Cypress and the application under test.
+- **Node.js:** Acts as the runtime for JavaScript-based tools like Cypress. It provides a fast, event-driven architecture and makes package management seamless through npm.
+- **Page Object Model (POM):** ensures separation of test logic and page elements, improving readability, reducing code duplication and easy maintainance.
+- **Mochawesome Reporter:** provides visually rich and detailed HTML reports with embedded screenshots/videos for easier test result analysis.
+- **Jenkins:** enables integration with CI/CD pipelines to ensure automated test execution with every code push and send a report via email to huge audiences and anyone can view the execution report from a shared location.
+- **Docker:** enables consistent, isolated, and parallel test execution across multiple browsers in any environment without local dependency issues.
+- **ESLint:** enforces consistent coding standards and improves maintainability.
+- **Git:** Enables version control, team collaboration, and easy integration with CI tools like Jenkins. It ensures code traceability and rollback capability
 
 ### Set up
 
