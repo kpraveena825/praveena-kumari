@@ -47,12 +47,12 @@ module.exports = defineConfig({
   fixturesFolder    : 'cypress/fixtures',
 
   //Screenshots
-  screenshotsFolder       : 'cypress/screenshots',
+  screenshotsFolder       : 'cypress/results/screenshots',
   screenshotOnRunFailure  : true,  //Whether Cypress will take a screenshot when a test fails during cypress run.
 
   //Videos
   video             : true,            //Whether Cypress will capture a video of the tests run with cypress run.
-  videosFolder      : 'cypress/videos',
+  videosFolder      : 'cypress/results/videos',
   videoCompression  : false,            //The quality setting for the video compression, in Constant Rate Factor (CRF). 
 
   //Viewport  (Override with cy.viewport() command)
