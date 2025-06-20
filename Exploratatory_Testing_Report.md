@@ -1,5 +1,7 @@
 ### Exploratory Testing Charter: ###
 
+**Application under Test** : *https://goodbudget.com/*
+
 | Charter | Priority | Reason                                                                                   |
 |---------|----------|------------------------------------------------------------------------------------------|
 | C1      | High     | Security issues in login/signup can compromise app safety and make it vulnerable to cyberattacks. |
@@ -22,18 +24,18 @@
 - Verify that invalid inputs do not get saved or passed to APIs and database. 
 
 #### C3 -Verify core functional behaviors such as transactions, Envelop,Login and SignUp ####
-**LOGIN:**
+###### LOGIN: ######
  - Successful login with valid credentials redirects to the home page.
  - Signup flow correctly stores user data and sends a confirmation email
 
- **TRANSACTION:**
+ ###### TRANSACTION: ######
  - Add a new transactions and check it's saved properly and Availabe balance is updated accordingly.
  - Edit and delete existing transactions and verify Ui update and database Synch
  - Check behavior on invalid, empty or negative transaction submissions
  - Verify transfer, Income, debt Transaction, Expense Credit functionalities
  - Check for export transaction reulting in CSV file download and Import transaction is allowing to upload the file. 
 
- **ENVELOPES:**
+ ###### ENVELOPES: ######
  - Verify Add, edit, and delete envelopes.
  - Ensure updated envelope budgets reflect correctly in totals
  - Check -ve and invalid amount is not accepted while setting the budget
@@ -41,7 +43,7 @@
  - Validate Add more Envelopes functionality 
  - Verify Bufget scheduling functionalities
 
-**OTHER VALIDATIONS:**
+###### OTHER VALIDATIONS: ######
  - Verifng the navigation sections/Subheader like <br>
    reports generation under Report, Guideline under Help and Links accesibility under Learns Header
 
