@@ -7,6 +7,10 @@ Cypress test automation framework built with **JavaScript (JS)** that follows th
 
 **Application under test : https://goodbudget.com/**
 
+- I have considered three critical flows for automation:
+Login, adding an income transaction, and adding/updating an envelope, followed by validating the updated values in the totals section.
+- To support parallel execution and prevent validation errors caused by session conflicts and shared account updates, credentials are managed per browser. During test execution, the appropriate set of credentials is automatically selected based on the browser in use.
+
 ### Prerequisites
 
 Ensure the following tools are installed:
@@ -21,18 +25,6 @@ Ensure the following tools are installed:
 ---
 
 ### Tech Stack
-
-| Layer                   | Tools / Libraries                                  |
-|-------------------------|----------------------------------------------------|
-| Language                | JavaScript                                         |
-| UI Testing              | Cypress                                            |
-| Build Tool              | Node.js                                            |
-| Containerization        | Docker                                             |
-| Reporting               | Mochawesome Reporter (via Cypress)                 |
-| Design Pattern          | Page Object Model (POM)                            |
-| Continuous Integration  | Jenkins                                            |
-| Version Control         | Git                                                |
-| Code Quality            | ESLint                                             |
 
 - **Cypress:** is a modern JavaScript-based testing framework, faster, and provides excellent debugging capabilities, making it ideal for UI automation of modern web applications.
 - **JavaScript:** was chosen as it's the language of the web and seamlessly integrates with Cypress and the application under test.
@@ -121,7 +113,7 @@ java -Dfile.encoding=UTF-8 -jar jenkins.war
 ![image](https://github.com/user-attachments/assets/1a9d2e35-061f-4a68-9b46-f7645910db4c)
 ![image](https://github.com/user-attachments/assets/8ef9c373-b3bf-4d5a-b688-54cceafea3c7)
 
-#### Docker multiBrowser parallel execution
+#### Docker multib rowser parallel execution
 To execute test using Docker, we can do the following in our terminal
  - Build the docker image from Dockerfile
 ``` bash
@@ -136,7 +128,10 @@ docker run -i -v "%cd%":/cypress_docker -t cypress_docker:latest test:login -- -
 docker-compose -f docker-compose-browsers up
 ```
 **Sample Reports running in EDGE, CHROME, FIREFOX Parallelly**
-![image](https://github.com/user-attachments/assets/df0eee12-903f-417c-9b99-06e87b0203f6)
+![image](https://github.com/user-attachments/assets/26c24648-e275-43fe-8cf4-756c491ed25d)
+
+![image](https://github.com/user-attachments/assets/bb95b423-0d1f-4658-898c-519da4ba1cfe)
+
 
 #### RESOURCES Referred:####
 - https://www.lambdatest.com/blog/jenkins-and-cypress-tutorial/
@@ -145,8 +140,8 @@ docker-compose -f docker-compose-browsers up
 - https://www.browserstack.com/guide/cypress-docker-tutorial
 - https://www.lambdatest.com/learning-hub/cypress-docker
 
-YouTUBE
+Youtube
 
-- Docker Cypress JoanMedia
+- Docker Cypress by JoanMedia
 
 
