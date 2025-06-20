@@ -23,14 +23,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kpraveena825/Cypress-Frameowrk.git"
+    "url": "git+https://github.com/kpraveena825/praveena-kumari.git"
   },
   "keywords": [
     "cypress"
   ],
   "author": "PraveenaKumari",
   "license": "ISC",
-  "homepage": "https://github.com/kpraveena825/Cypress-Frameowrk/#readme",
+  "homepage": "https://github.com/kpraveena825/praveena-kumari/blob/main/README.md",
   "devDependencies": {
     "@cypress/grep": "^3.1.5",
     "@faker-js/faker": "^8.0.2",

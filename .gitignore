@@ -10,6 +10,7 @@
 node_modules
 cypress/screenshots
 cypress/reports
+cypress/results/junit
 cypress/downloads
 
 # Values in here will overwrite conflicting environment variables in your Cypress configuration.
