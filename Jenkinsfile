@@ -83,7 +83,7 @@ pipeline {
                     reportFiles: 'index.html',
                     reportName: 'Cypress Mochawesome Report',
                     reportTitles: 'Cypress Test Automation Framework',
-                    useWrapperFileDirectly: true
+                    useWrapperFileDirectly: false
             ])
         }
         
